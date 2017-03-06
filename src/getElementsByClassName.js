@@ -4,17 +4,9 @@
 // };
 
 // But instead we're going to implement it from scratch:
-// var result=[];
-// var element = document.documentElement;
-// var children = $(element).children();
 
-var getElementsByClassName = function(className
-) {
-//no more siblings and no more children 
+var getElementsByClassName = function(className) {
 
-    // if ($(element).hasClass(className)){
-    //     result.push(element);
-    // }
     var results = [];
     return getElementsByClassNameHelper(className, document.documentElement, results);
 };
