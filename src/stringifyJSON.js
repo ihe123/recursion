@@ -12,16 +12,15 @@ if (obj === NaN){
     return "null";
 }
 
-if(typeof obj==="number"){
+else if(typeof obj==="number"){
     return obj.toString();
 }
-if(typeof obj==="string"){
+else if(typeof obj==="string"){
    var objString = '"'+obj+'"'
     return objString;
 } 
 
-
-if(Array.isArray(obj)){
+else if(Array.isArray(obj)){
 
     if(obj[0]===undefined && obj.length===1){
         return "[]";
@@ -41,24 +40,22 @@ if(Array.isArray(obj)){
     return final;
 }
 
-if(obj === null){
+else if(obj === null){
     return "null";
 } 
-if(obj=== undefined){
+else if(obj=== undefined){
     return undefined;
 }
-if(obj === true){
+else if(obj === true){
     return "true";
 }
 
-if(obj === false){
+else if(obj === false){
     return "false";
 }
 
-if(obj instanceof Object){
+else if(obj instanceof Object){
 
-    
- 
     var finale = "{";
     var keys = Object.keys(obj);
     if(keys.indexOf("undefined")>=0 && obj[keys.indexOf("undefined")]===undefined){
